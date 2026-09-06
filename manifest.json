@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "BLACKOUT·SHIELD",
+  "short_name": "Blackout",
+  "version": "0.1.0",
+  "description": "Brouille les empreintes canvas, WebGL et audio, normalise les signaux matériel/langue — sans casser les sites. Pour Firefox, préférez privacy.resistFingerprinting ; ici c'est pour Chromium.",
+  "minimum_chrome_version": "111",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "BLACKOUT·SHIELD — anti-fingerprinting"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "file:///*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

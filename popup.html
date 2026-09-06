@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<header>
+  <div class="brand"><span class="dot"></span>BLACKOUT<span>·SHIELD</span></div>
+  <span class="pill" id="statusPill">…</span>
+</header>
+
+<main id="rows" aria-live="polite"></main>
+
+<footer>
+  <p class="hint" id="reloadHint">Réglage modifié → <b>rechargez l'onglet</b> pour une application complète.</p>
+  <p class="hint dim">Fuite WebRTC&nbsp;: ouvrez <span class="mono">chrome://flags/#enable-webrtc-hide-local-ips-with-mdns</span> → <b>Enabled</b> (adresses locales masquées par mDNS). Non modifiable par extension.</p>
+  <p class="hint dim">Pour auditer un fichier local&nbsp;: <b>chrome://extensions</b> → Détails → activer «&nbsp;Accès aux fichiers&nbsp;».</p>
+</footer>
+<script src="popup.js"></script>
+</body>
+</html>

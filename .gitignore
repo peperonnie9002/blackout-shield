@@ -1,0 +1,8 @@
+# BLACKOUT·SHIELD — exclusions
+.DS_Store
+Thumbs.db
+*.crx
+*.zip
+*.pem
+*.key
+node_modules/
